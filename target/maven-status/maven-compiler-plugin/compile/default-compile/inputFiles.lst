@@ -1,0 +1,9 @@
+C:\Workspace\Java\tasks-api\src\main\java\com\example\tasks\controller\TaskController.java
+C:\Workspace\Java\tasks-api\src\main\java\com\example\tasks\dto\TaskDTO.java
+C:\Workspace\Java\tasks-api\src\main\java\com\example\tasks\exception\GlobalExceptionHandler.java
+C:\Workspace\Java\tasks-api\src\main\java\com\example\tasks\exception\TaskNotFoundException.java
+C:\Workspace\Java\tasks-api\src\main\java\com\example\tasks\model\Task.java
+C:\Workspace\Java\tasks-api\src\main\java\com\example\tasks\model\TaskStatus.java
+C:\Workspace\Java\tasks-api\src\main\java\com\example\tasks\repository\TaskRepository.java
+C:\Workspace\Java\tasks-api\src\main\java\com\example\tasks\service\TaskService.java
+C:\Workspace\Java\tasks-api\src\main\java\com\example\tasks\TasksApplication.java
