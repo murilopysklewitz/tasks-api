@@ -14,22 +14,35 @@ import java.util.Map;
 
     @ExceptionHandler(TaskNotFoundException.class)
     public ResponseEntity&lt;Map&lt;String, String&gt;&gt; handleNotFound(TaskNotFoundException ex) {
-<span class="fc" id="L17">        return ResponseEntity.status(HttpStatus.NOT_FOUND)</span>
-<span class="fc" id="L18">                .body(Map.of(&quot;erro&quot;, ex.getMessage()));</span>
+
+
+<span class="fc" id="L19">        return ResponseEntity.status(HttpStatus.NOT_FOUND)</span>
+<span class="fc" id="L20">                .body(Map.of(&quot;erro&quot;, ex.getMessage()));</span>
+
     }
+
+
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity&lt;Map&lt;String, String&gt;&gt; handleValidation(MethodArgumentNotValidException ex) {
-<span class="fc" id="L23">        Map&lt;String, String&gt; errors = new HashMap&lt;&gt;();</span>
-<span class="fc" id="L24">        ex.getBindingResult().getFieldErrors()</span>
-<span class="fc" id="L25">                .forEach(e -&gt; errors.put(e.getField(), e.getDefaultMessage()));</span>
-<span class="fc" id="L26">        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);</span>
+
+<span class="fc" id="L29">        Map&lt;String, String&gt; errors = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L30">        ex.getBindingResult().getFieldErrors()</span>
+<span class="fc" id="L31">                .forEach(e -&gt; errors.put(e.getField(), e.getDefaultMessage()));</span>
+<span class="fc" id="L32">        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);</span>
+
     }
+
+
+
+
 
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity&lt;Map&lt;String, String&gt;&gt; handleIllegalArgument(IllegalArgumentException ex) {
-<span class="fc" id="L31">        return ResponseEntity.status(HttpStatus.BAD_REQUEST)</span>
-<span class="fc" id="L32">                .body(Map.of(&quot;erro&quot;, ex.getMessage()));</span>
+
+<span class="fc" id="L43">        return ResponseEntity.status(HttpStatus.BAD_REQUEST)</span>
+<span class="fc" id="L44">                .body(Map.of(&quot;erro&quot;, ex.getMessage()));</span>
+
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
