@@ -165,4 +165,4 @@ git push -u origin main
 
 ## Autor(es)
 
-Projeto desenvolvido para fins acadêmicos na disciplina de Desenvolvimento Web utilizando Spring Boot.
+Projeto desenvolvido para fins acadêmicos na disciplina de Programação Orientada a Objetos utilizando Spring Boot.
