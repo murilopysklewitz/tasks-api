@@ -1,6 +1,6 @@
 # Tasks API
 
-API para gerenciar tarefas feita com Spring Boot.
+API para gerenciamento de tarefas desenvolvida com Spring Boot.
 
 ---
 
@@ -16,23 +16,31 @@ API para gerenciar tarefas feita com Spring Boot.
 * Mockito
 * JaCoCo
 * Render
+* Supabase
 
 ---
 
 ## Como rodar
 
-Pré-requisitos:
+### Pré-requisitos
 
 * Java 17
 * Maven
 
+Clone o repositório:
+
 ```bash
-git clone <URL_DO_REPO>
+git clone https://github.com/murilopysklewitz/tasks-api.git
 cd tasks-api
+```
+
+Execute a aplicação:
+
+```bash
 mvn spring-boot:run
 ```
 
-A API vai rodar em:
+A API ficará disponível em:
 
 ```text
 http://localhost:8080
@@ -111,7 +119,7 @@ Executar todos os testes:
 mvn test
 ```
 
-O relatório de cobertura fica em:
+O relatório de cobertura fica disponível em:
 
 ```text
 target/site/jacoco/index.html
@@ -121,12 +129,17 @@ target/site/jacoco/index.html
 
 ## Deploy
 
-**Plataforma:** Render
+**Plataforma da API:** Render
 
-**URL:** `https://tasks-api.onrender.com`
-*(atualizar após o deploy)*
+**URL da aplicação:**
 
-O projeto utiliza o arquivo `render.yaml` para configurar automaticamente a aplicação e o banco PostgreSQL.
+https://tasks-api-zszh.onrender.com/
+
+O deploy da aplicação foi realizado utilizando o Render.
+
+O banco de dados PostgreSQL utilizado pela API está hospedado no Supabase e conectado à aplicação por meio das variáveis de ambiente configuradas no Render.
+
+O projeto utiliza o arquivo `render.yaml` para automatizar a configuração do serviço durante o deploy.
 
 ### Passo a passo
 
@@ -137,16 +150,17 @@ O projeto utiliza o arquivo `render.yaml` para configurar automaticamente a apli
 git init
 git add .
 git commit -m "primeiro commit"
-git remote add origin <URL_DO_REPO>
+git remote add origin https://github.com/murilopysklewitz/tasks-api.git
 git push -u origin main
 ```
 
-3. No Render, clicar em **New → Blueprint**.
-4. Selecionar o repositório.
-5. O Render detectará o arquivo `render.yaml` e configurará os recursos automaticamente.
-6. Aguardar o término do build e acessar a URL gerada.
+3. No Render, selecionar **New → Blueprint**.
+4. Escolher o repositório do projeto.
+5. O Render detectará automaticamente o arquivo `render.yaml`.
+6. Configurar as variáveis de ambiente para conexão com o banco PostgreSQL hospedado no Supabase.
+7. Aguardar a conclusão do build e acessar a URL gerada pelo serviço.
 
-> No plano gratuito, o serviço pode entrar em modo de suspensão após um período sem uso. A primeira requisição pode levar alguns segundos para responder.
+> No plano gratuito do Render, o serviço pode entrar em modo de suspensão após um período sem uso. A primeira requisição pode levar alguns segundos para responder.
 
 ---
 
@@ -165,4 +179,4 @@ git push -u origin main
 
 ## Autor(es)
 
-Projeto desenvolvido para fins acadêmicos na disciplina de Programação Orientada a Objetos utilizando Spring Boot.
+Projeto desenvolvido para fins acadêmicos na disciplina de **Programação Orientada a Objetos**, utilizando Spring Boot para construção da API e PostgreSQL para persistência dos dados.
