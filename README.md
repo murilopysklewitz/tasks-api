@@ -168,15 +168,14 @@ git push -u origin main
 
 | Membro             | O que fez                        |
 | ------------------ | -------------------------------- |
-| Nome do integrante | Model, entidade JPA e Repository |
-| Nome do integrante | Service e regras de negócio      |
-| Nome do integrante | Controller e rotas               |
-| Nome do integrante | DTOs e Deploy                    |
-| Nome do integrante | Testes de Service                |
-| Nome do integrante | Testes de Controller e README    |
+|      Eduardo       | Model                            |
+|     Guilherme      | Repository                       |
+|      Murilo        | Service e Exception              |
+|      Julia         | Controller e DTO                 |
+|  Murilo Pysklewitz | Testes                           |
+|  Erick Ferreira    | README                           |
 
 ---
 
-## Autor(es)
 
 Projeto desenvolvido para fins acadêmicos na disciplina de **Programação Orientada a Objetos**, utilizando Spring Boot para construção da API e PostgreSQL para persistência dos dados.
